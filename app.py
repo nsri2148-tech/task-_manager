@@ -243,5 +243,5 @@ def toggle_status(task_id):
 # ---------------------------------------------------------
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()  # Creates taskmanager.db and tables if they don't exist
-    app.run(debug=True)
+        db.create_all()  # Create taskmanager.db and tables if they don't exist
+    app.run(debug=False)
