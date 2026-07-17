@@ -57,7 +57,7 @@ def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if 'user_id' not in session:
-            flash('Please log in to continue.', 'warning')
+            flash('Please log --in to continue.', 'warning')
             return redirect(url_for('login'))
         return f(*args, **kwargs)
     return decorated_function
@@ -243,5 +243,5 @@ def toggle_status(task_id):
 # ---------------------------------------------------------
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()  # Creates taskmanager.db and tables if they don't exist
-    app.run(debug=True)
+        db.create_all()  # Create taskmanager.db and tables if they don't exist
+    app.run(debug=False)
